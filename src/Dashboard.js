@@ -26,7 +26,7 @@ const Dashboard = () => {
     formData.append('file', file);
 
     try {
-      const response = await axios.post('http://localhost:8000/upload', formData, {
+      const response = await axios.post('https://findash-apis.vercel.app/upload', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       setData(response.data);
