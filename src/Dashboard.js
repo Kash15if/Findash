@@ -124,6 +124,7 @@ const Dashboard = () => {
                 <th style={styles.tableHeader}>Month</th>
                 <th style={styles.tableHeader}>Total Debit</th>
                 <th style={styles.tableHeader}>Total Credit</th>
+                <th style={styles.tableHeader}>Net Total </th>
               </tr>
             </thead>
             <tbody>
@@ -132,6 +133,7 @@ const Dashboard = () => {
                   <td style={styles.tableCell}>{month}</td>
                   <td style={styles.tableCell}>{perMonthDebit[month]}</td>
                   <td style={styles.tableCell}>{perMonthCredit[month]}</td>
+                  <td style={styles.tableCell}>{perMonthCredit[month] - perMonthDebit[month]}</td>
                 </tr>
               ))}
             </tbody>
